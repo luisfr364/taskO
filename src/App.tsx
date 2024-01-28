@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Form from "./components/Form.tsx";
 import OngoingList from "./components/OngoingList.tsx";
+import Header from "./components/Header.tsx";
 
 function App() {
     const [onGoingTaskList, setOngoingTaskList] = useState([]);
@@ -28,6 +29,7 @@ function App() {
 
     return (
         <>
+            <Header />
             <Form onGoingTaskList={onGoingTaskList} setOngoingTaskList={setOngoingTaskList} />
             <OngoingList onGoingTaskList={onGoingTaskList} deleteTask={deleteTask} />
         </>

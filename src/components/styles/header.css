@@ -1,0 +1,14 @@
+header {
+    margin: 3%;
+    text-align: center;
+}
+
+b {
+    margin: 0.1em;
+    padding: 0.5%;
+    border: solid 2px black;
+}
+
+h1 {
+    font-size: 3.5rem;
+}

@@ -1,6 +1,18 @@
 import { useState } from "react";
+import "./styles/form.css";
 
-function Form({ onGoingTaskList, setOngoingTaskList }) {
+interface formProps {
+    onGoingTaskList: never[];
+    setOngoingTaskList: (param: Array<itemObj>) => void;
+}
+
+interface itemObj {
+    id: number;
+    title: string;
+    addedDate: string;
+}
+
+function Form({ onGoingTaskList, setOngoingTaskList }: formProps) {
     const [itemTitleInput, setItemTitleInput] = useState("");
 
     const itemObj = {
@@ -9,7 +21,7 @@ function Form({ onGoingTaskList, setOngoingTaskList }) {
         addedDate: new Date().toLocaleDateString(),
     };
 
-    function handleSubmit(e) {
+    function handleSubmit(e: Event): void {
         e.preventDefault();
 
         setOngoingTaskList((onGoingTaskList) => [...onGoingTaskList, itemObj]);
@@ -18,7 +30,7 @@ function Form({ onGoingTaskList, setOngoingTaskList }) {
     }
 
     return (
-        <form action="submit" onSubmit={(e) => handleSubmit(e)}>
+        <form className="form" action="submit" onSubmit={(e) => handleSubmit(e)}>
             <input
                 type="text"
                 value={itemTitleInput}
