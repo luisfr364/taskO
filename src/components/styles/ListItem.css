@@ -1,8 +1,9 @@
 .list__item {
     width: 14svw;
     height: 18svh;
-    border: 2px solid black;
+    border: 3px solid black;
     margin: 1em;
+    padding: 0.5em;
 }
 
 .item__main-block {
@@ -15,4 +16,25 @@
 .item__block1 {
     display: flex;
     gap: 10px;
+}
+
+#item__remove {
+    text-align: right;
+    margin: 10px 5px 0 90%;
+    padding: 0.15em 0.4em;
+    border: 2px solid black;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#item__remove:hover {
+    background-color: grey;
+}
+
+.item__date {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
